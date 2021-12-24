@@ -1,0 +1,31 @@
+{
+  "name": "apptrack-back",
+  "version": "1.0.0",
+  "description": "![license badge](https://img.shields.io/badge/license-MIT-blue) ## Description This is the back end to a site to track applications to new jobs. ## Table of Contents - [Installation](#installation) - [Usage](#usage) - [License](#license) ## Installation Required Dependencies: ## Usage Link:   ## Credits Zach Smith - [GitHub Profile](https://github.com/Lemelisk27)   ## License This Product is licensed under the MIT license.   For more information please visit: https://spdx.org/licenses/MIT.html ## Questions   If you have any questions you can contact me directly at Lemelisk27@gmail.com. You can also find more of my work on GitHub at [Lemelisk27@gmail.com](https://github.com/Lemelisk27@gmail.com) or visit my profile [here](https://lemelisk27.herokuapp.com).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemelisk27/apptrack-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lemelisk27/apptrack-back/issues"
+  },
+  "homepage": "https://github.com/Lemelisk27/apptrack-back#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^7.0.0-alpha.2"
+  }
+}
