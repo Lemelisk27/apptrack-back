@@ -25,6 +25,10 @@ App.init({
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: true
+    },
+    title: {
+        type: DataTypes.TEXT,
+        allowNull: false
     }
 },
 {

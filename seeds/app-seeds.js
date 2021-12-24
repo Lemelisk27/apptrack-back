@@ -7,6 +7,7 @@ const appData = [
         applied: Date.now(),
         link: "https://www.google.com",
         notes: "notes on the first company",
+        title: "First Web Development",
         UserId: 1
     },
     {
@@ -15,6 +16,7 @@ const appData = [
         applied: Date.now(),
         link: "https://www.google.com",
         notes: "notes on the second company",
+        title: "Second Web Development",
         UserId: 1
     },
     {
@@ -23,6 +25,7 @@ const appData = [
         applied: Date.now(),
         link: "https://www.google.com",
         notes: "notes on the closed company",
+        title: "Closed Web Development",
         open: false,
         UserId: 1
     }
