@@ -8,8 +8,16 @@ This is the back end to a site to track applications to new jobs.
 - [License](#license)
 ## Installation
 Required Dependencies:
+- bcrypt
+- compression
+- cors
+- dotenv
+- express
+- jsonwebtoken
+- mysql2
+- sequelize
 ## Usage
-Link:  
+Link: [https://zwsapptrack.herokuapp.com](https://zwsapptrack.herokuapp.com)  
 ## Credits
 Zach Smith - [GitHub Profile](https://github.com/Lemelisk27)  
 ## License
