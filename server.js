@@ -7,7 +7,7 @@ const cors = require("cors")
 const app = express()
 // app.use(cors())
 app.use(cors({
-    origin:["https://zwsapptrack.herokuapp.com/"]
+    origin:["https://zwsapptrack.herokuapp.com"]
 }))
 const PORT = process.env.PORT || 3001
 
