@@ -11,7 +11,8 @@ router.get("/user/:id", tokenAuth, (req, res) => {
         },
         attributes: {
             include: [[sequelize.fn('date_format', sequelize.col('applied'), '%m-%d-%Y'), 'applied_date']]
-        }
+        },
+        order: [["applied", "DESC"]]
     })
     .then(foundApps=>{
         if (!foundApps) {
@@ -20,6 +21,24 @@ router.get("/user/:id", tokenAuth, (req, res) => {
         else {
             res.json(foundApps)
         }
+    })
+    .catch(err=>{
+        console.log(err)
+        res.status(500).json({Message: "An Error Occured", err:err})
+    })
+})
+
+router.post("/", tokenAuth, (req, res) => {
+    App.create({
+        UserId: req.body.UserId,
+        employer: req.body.employer,
+        applied: req.body.applied,
+        link: req.body.link,
+        notes: req.body.notes,
+        title: req.body.title,
+    })
+    .then(newApp=>{
+        res.json(newApp)
     })
     .catch(err=>{
         console.log(err)
