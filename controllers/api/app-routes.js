@@ -10,7 +10,7 @@ router.get("/user/:id", tokenAuth, (req, res) => {
             UserId: req.params.id
         },
         attributes: {
-            include: [[sequelize.fn('date_format', sequelize.col('applied'), '%m-%d-%Y'), 'applied_date']]
+            include: [[sequelize.fn('date_format', sequelize.col('applied'), '%m-%d-%Y'), 'applied_date'],[sequelize.fn('date_format', sequelize.col('closed'), '%m-%d-%Y'), 'closed_date']]
         },
         order: [["applied", "DESC"]]
     })
