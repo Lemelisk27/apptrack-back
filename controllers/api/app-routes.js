@@ -113,4 +113,23 @@ router.put("/", tokenAuth, (req, res) => {
     })
 })
 
+router.put("/open", tokenAuth, (req, res) => {
+    App.update({
+        closed: req.body.closed,
+        open: req.body.open
+    },
+    {
+        where: {
+            id: req.body.id
+        }
+    })
+    .then(updatedApp=>{
+        res.json(updatedApp)
+    })
+    .catch(err=>{
+        console.log(err)
+        res.status(500).json({Message: "An Error Occured", err:err})
+    })
+})
+
 module.exports = router
