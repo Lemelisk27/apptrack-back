@@ -6,7 +6,8 @@ const userData = [
        first_name: "Zach",
        last_name: "Smith",
        username: "Lemelisk27",
-       password: "password"
+       password: "password",
+       admin: true
     }
 ]
 
