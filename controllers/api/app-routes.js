@@ -132,4 +132,19 @@ router.put("/open", tokenAuth, (req, res) => {
     })
 })
 
+router.delete("/:id", tokenAuth, (req, res) => {
+    App.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(deleteApp=>{
+        res.json(deleteApp)
+    })
+    .catch(err=>{
+        console.log(err)
+        res.status(500).json({Message: "An Error Occured", err:err})
+    })
+})
+
 module.exports = router
